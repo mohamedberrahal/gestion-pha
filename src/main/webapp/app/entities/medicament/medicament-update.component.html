@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-medicament-heading" jhiTranslate="dbgestionPhaApp.medicament.home.createOrEditLabel">Create or edit a Medicament</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!medicament.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="medicament.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dbgestionPhaApp.medicament.nom" for="field_nom" [ngbTooltip]="'dbgestionPhaApp.medicament.help.nom' | translate">Nom</label>
+                    <input type="text" class="form-control" name="nom" id="field_nom"
+                        [(ngModel)]="medicament.nom" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dbgestionPhaApp.medicament.libelle" for="field_libelle">Libelle</label>
+                    <input type="text" class="form-control" name="libelle" id="field_libelle"
+                        [(ngModel)]="medicament.libelle" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dbgestionPhaApp.medicament.discription" for="field_discription">Discription</label>
+                    <input type="text" class="form-control" name="discription" id="field_discription"
+                        [(ngModel)]="medicament.discription" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dbgestionPhaApp.medicament.prix" for="field_prix">Prix</label>
+                    <input type="number" class="form-control" name="prix" id="field_prix"
+                        [(ngModel)]="medicament.prix" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dbgestionPhaApp.medicament.dateExpiraction" for="field_dateExpiraction">Date Expiraction</label>
+                    <div class="d-flex">
+                        <input id="field_dateExpiraction" type="datetime-local" class="form-control" name="dateExpiraction" [(ngModel)]="dateExpiraction" placeholder="YYYY-MM-DD HH:mm"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="dbgestionPhaApp.medicament.maladie" for="field_maladie">Maladie</label>
+                    <select class="form-control" id="field_maladie" name="maladie" [(ngModel)]="medicament.maladie" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="maladieOption.id === medicament.maladie?.id ? medicament.maladie : maladieOption" *ngFor="let maladieOption of maladies; trackBy: trackMaladieById">{{maladieOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

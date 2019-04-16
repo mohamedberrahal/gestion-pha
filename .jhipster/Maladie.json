@@ -1,0 +1,30 @@
+{
+    "name": "Maladie",
+    "fields": [
+        {
+            "fieldName": "maladieName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "medicament",
+            "otherEntityRelationshipName": "maladie",
+            "javadoc": "A relationship",
+            "relationshipName": "medicament"
+        }
+    ],
+    "changelogDate": "20190331001321",
+    "entityTableName": "maladie",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

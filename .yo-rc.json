@@ -1,0 +1,38 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.fsl.ma",
+            "nativeLanguage": "en"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "dbgestionPha",
+        "packageName": "com.fsl.ma",
+        "packageFolder": "com/fsl/ma",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": true,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "h2Memory",
+        "prodDatabaseType": "mysql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": "eureka",
+        "buildTool": "gradle",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "NzFkNzE5ZGUzZmZkMTgwZDRmMGJmMDY2ZTkzOTg2YjJkMmE0ZTNhNDBjNWJlNmJjOGViYjQ4YTU4MDczN2NmZDNmODQ3ZGM3NmVmZjlhZTMxYjQ0MjllMzY3ZmJhNzU1MDU1NDY0NGZmMzFhYTBjMDhjOTQ5NDE2MWJkNzVmYTA=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "en",
+        "languages": ["en"]
+    }
+}

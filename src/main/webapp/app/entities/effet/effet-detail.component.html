@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="effet">
+            <h2><span jhiTranslate="dbgestionPhaApp.effet.detail.title">Effet</span> {{effet.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="dbgestionPhaApp.effet.libelle">Libelle</span></dt>
+                <dd>
+                    <span>{{effet.libelle}}</span>
+                </dd>
+                <dt><span jhiTranslate="dbgestionPhaApp.effet.discription">Discription</span></dt>
+                <dd>
+                    <span>{{effet.discription}}</span>
+                </dd>
+                <dt><span jhiTranslate="dbgestionPhaApp.effet.medicament">Medicament</span></dt>
+                <dd>
+                    <div *ngIf="effet.medicament">
+                        <a [routerLink]="['/medicament', effet.medicament?.id, 'view']">{{effet.medicament?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/effet', effet.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

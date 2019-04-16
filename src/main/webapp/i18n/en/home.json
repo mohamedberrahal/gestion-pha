@@ -1,0 +1,19 @@
+{
+    "home": {
+        "title": "Bienvenu sur le système de gestion",
+        "subtitle": "",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": "",
+        "link": {
+            "homepage": "bienvenu sur le système de gestion",
+            "stackoverflow": "",
+            "bugtracker": "",
+            "chat": "",
+            "follow": ""
+        },
+        "like": "",
+        "github": ""
+    }
+}

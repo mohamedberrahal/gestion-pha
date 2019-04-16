@@ -1,0 +1,27 @@
+{
+    "name": "Destination",
+    "fields": [
+        {
+            "fieldName": "population",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "medicament",
+            "otherEntityName": "medicament",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190331001320",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "destination",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

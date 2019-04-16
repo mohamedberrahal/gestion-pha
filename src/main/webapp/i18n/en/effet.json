@@ -1,0 +1,23 @@
+{
+    "dbgestionPhaApp": {
+        "effet": {
+            "home": {
+                "title": "Effets",
+                "createLabel": "Create a new Effet",
+                "createOrEditLabel": "Create or edit a Effet"
+            },
+            "created": "A new Effet is created with identifier {{ param }}",
+            "updated": "A Effet is updated with identifier {{ param }}",
+            "deleted": "A Effet is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Effet {{ id }}?"
+            },
+            "detail": {
+                "title": "Effet"
+            },
+            "libelle": "Libelle",
+            "discription": "Discription",
+            "medicament": "Medicament"
+        }
+    }
+}

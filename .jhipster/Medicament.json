@@ -1,0 +1,56 @@
+{
+    "name": "Medicament",
+    "fields": [
+        {
+            "fieldName": "nom",
+            "javadoc": "The firstname attribute.",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "libelle",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "discription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prix",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateExpiraction",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "maladie",
+            "otherEntityName": "maladie",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "effet",
+            "otherEntityRelationshipName": "medicament",
+            "relationshipName": "effet"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "destination",
+            "otherEntityRelationshipName": "medicament",
+            "relationshipName": "destination"
+        }
+    ],
+    "changelogDate": "20190331001322",
+    "javadoc": "The Medicament entity.",
+    "entityTableName": "medicament",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
